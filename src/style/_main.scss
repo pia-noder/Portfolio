@@ -1,0 +1,18 @@
+body {
+	margin: 0;
+	color: $color-text;
+	background-color: $color-bg;
+	font-family: $roboto;
+	font-size: 6.25;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+h1{
+	color: $color-text;
+	font-family: $bebas;
+	font-size: 10em;
+}
+section{
+	margin: auto;
+}
