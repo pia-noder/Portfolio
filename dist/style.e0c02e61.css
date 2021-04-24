@@ -204,27 +204,40 @@ header .intro-wrapper .passion-img img {
   }
 }
 footer {
+  display: flex;
   margin-top: 10vh;
   background-color: #B8D2BE;
-  display: flex;
+}
+footer h3 {
+  font-size: 1.5em;
+  color: black;
 }
 footer .contact {
-  width: 50%;
   padding: 32px;
+  width: 50%;
 }
-footer .contact a {
+footer .contact .email {
   text-decoration: none;
   color: #BE6969;
   font-size: 2em;
-  padding-left: 20px;
+}
+footer .contact a {
+  text-decoration: none;
+  color: black;
 }
 footer .social {
-  width: 50%;
   padding: 32px;
+  width: 50%;
 }
 footer .social a {
   text-decoration: none;
-  color: #BE6969;
+  font-size: 1.5em;
+  display: block;
+  color: black;
+}
+footer .social a:hover {
+  color: darkcyan;
+  transform: scale(1.1);
 }
 
 /*# sourceMappingURL=/style.e0c02e61.css.map */

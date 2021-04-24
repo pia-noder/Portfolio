@@ -1,23 +1,38 @@
 footer{
+    display: flex;
     margin-top: 10vh;
     background-color: $secondary-colour;
-    display: flex;
+    h3{
+        font-size: 1.5em;
+        color: black;
+    }
     .contact{
-        width: 50%;
         padding: 32px;
+        width: 50%;
+        .email{
+          text-decoration: none; 
+          color: $color-link; 
+          font-size: 2em;
+        }
         a{
             text-decoration: none;
-            color: $color-text;
-            font-size: 2em;
-            padding-left: 20px;
+            color: black;
         }
+        
     }
-    .social{
-        width: 50%;
-        padding: 32px;
-        a{
-            text-decoration: none;
-            color: $color-link;
-        }
-    }
+   .social{
+       padding: 32px;
+       width: 50%;
+       a{
+           text-decoration: none;
+           font-size: 1.5em;
+           display: block;
+           color: black;
+           &:hover{
+               color:darkcyan;
+               transform: scale(1.1);
+           }
+       }
+
+   }
 }
