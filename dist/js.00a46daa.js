@@ -117,9 +117,88 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"js/index.js":[function(require,module,exports) {
+})({"assets/reservia (1).png":[function(require,module,exports) {
+module.exports = "/reservia (1).087d36e9.png";
+},{}],"assets/Ohmyfood.jpg":[function(require,module,exports) {
+module.exports = "/Ohmyfood.7f675792.jpg";
+},{}],"js/index.js":[function(require,module,exports) {
+"use strict";
 
-},{}],"../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+var _reservia = _interopRequireDefault(require("../assets/reservia (1).png"));
+
+var _Ohmyfood = _interopRequireDefault(require("../assets/Ohmyfood.jpg"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _createForOfIteratorHelper(o, allowArrayLike) { var it; if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it.return != null) it.return(); } finally { if (didErr) throw err; } } }; }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+//Faire appraraitre dans le losange l'image du site lors du survole de son nom
+//1)Créer un event lors du survole du nom du site 
+//2)Récupérer le nom et y associer l'image correspondante
+//3)Intégrer l'img dans le losange
+var divSites = document.getElementsByClassName('projectDisplay');
+
+var _iterator = _createForOfIteratorHelper(divSites),
+    _step;
+
+try {
+  var _loop = function _loop() {
+    var elt = _step.value;
+    elt.addEventListener('mouseover', function (event) {
+      var catchSiteName = event.path[0].attributes.class.value;
+      var siteId = catchSiteName.split(' ')[0];
+      displaySiteImg(siteId);
+      elt.addEventListener('mouseleave', function (event) {
+        console.log(event);
+        var imgDisplay = document.getElementsByClassName('imgDisplay');
+        imgDisplay[0].remove();
+      });
+    });
+  };
+
+  for (_iterator.s(); !(_step = _iterator.n()).done;) {
+    _loop();
+  }
+} catch (err) {
+  _iterator.e(err);
+} finally {
+  _iterator.f();
+}
+
+function displaySiteImg(siteId) {
+  var losangeDisplay = document.getElementById('img-display');
+  var imgSite = document.createElement('img');
+  console.log(siteId);
+  losangeDisplay.appendChild(imgSite);
+  imgSite.setAttribute('class', 'imgDisplay');
+  console.log(_typeof(siteId));
+
+  switch (siteId) {
+    case 'site1':
+      imgSite.src = _reservia.default;
+      break;
+
+    case 'site2':
+      imgSite.src = _Ohmyfood.default;
+      break;
+
+    case 'site3':
+      imgSite.src = Site3;
+      break;
+
+    default:
+      console.log("Sorry, we are out of image.");
+  }
+}
+
+;
+},{"../assets/reservia (1).png":"assets/reservia (1).png","../assets/Ohmyfood.jpg":"assets/Ohmyfood.jpg"}],"../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -147,7 +226,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54770" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51138" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

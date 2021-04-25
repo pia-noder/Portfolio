@@ -1,5 +1,9 @@
 .items{
    .project-display{
+      .imgDisplay{
+         transform: rotate(-0.125turn);
+      }          
+      
       .img-display{
          margin: auto;
          margin-top: 10%;
@@ -85,9 +89,7 @@
          .site5{
             padding-top: 195px;
          }
-
-          
-         
+       
       }
 
       .splitting .char {

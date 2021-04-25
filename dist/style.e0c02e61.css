@@ -109,6 +109,9 @@ header .intro-wrapper .passion-img img {
   max-height: 90vh;
 }
 
+.items .project-display .imgDisplay {
+  transform: rotate(-0.125turn);
+}
 .items .project-display .img-display {
   margin: auto;
   margin-top: 10%;
