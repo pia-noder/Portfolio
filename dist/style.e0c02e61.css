@@ -111,6 +111,8 @@ header .intro-wrapper .passion-img img {
 
 .items .project-display .imgDisplay {
   transform: rotate(-0.125turn);
+  width: 100%;
+  height: 100%;
 }
 .items .project-display .img-display {
   margin: auto;

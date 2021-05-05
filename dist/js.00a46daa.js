@@ -117,16 +117,24 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"assets/reservia (1).png":[function(require,module,exports) {
-module.exports = "/reservia (1).087d36e9.png";
+})({"assets/reservia.png":[function(require,module,exports) {
+module.exports = "/reservia.d7ccb00c.png";
 },{}],"assets/Ohmyfood.jpg":[function(require,module,exports) {
 module.exports = "/Ohmyfood.7f675792.jpg";
+},{}],"assets/chouette.jpg":[function(require,module,exports) {
+module.exports = "/chouette.98258cd6.jpg";
+},{}],"assets/groupomania.jpg":[function(require,module,exports) {
+module.exports = "/groupomania.f60fe198.jpg";
 },{}],"js/index.js":[function(require,module,exports) {
 "use strict";
 
-var _reservia = _interopRequireDefault(require("../assets/reservia (1).png"));
+var _reservia = _interopRequireDefault(require("../assets/reservia.png"));
 
 var _Ohmyfood = _interopRequireDefault(require("../assets/Ohmyfood.jpg"));
+
+var _chouette = _interopRequireDefault(require("../assets/chouette.jpg"));
+
+var _groupomania = _interopRequireDefault(require("../assets/groupomania.jpg"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -189,7 +197,11 @@ function displaySiteImg(siteId) {
       break;
 
     case 'site3':
-      imgSite.src = Site3;
+      imgSite.src = _chouette.default;
+      break;
+
+    case 'site6':
+      imgSite.src = _groupomania.default;
       break;
 
     default:
@@ -198,7 +210,7 @@ function displaySiteImg(siteId) {
 }
 
 ;
-},{"../assets/reservia (1).png":"assets/reservia (1).png","../assets/Ohmyfood.jpg":"assets/Ohmyfood.jpg"}],"../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"../assets/reservia.png":"assets/reservia.png","../assets/Ohmyfood.jpg":"assets/Ohmyfood.jpg","../assets/chouette.jpg":"assets/chouette.jpg","../assets/groupomania.jpg":"assets/groupomania.jpg"}],"../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;

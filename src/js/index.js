@@ -1,48 +1,19 @@
-//Import des images avec un nom pour les réutiliser
-import Site1 from '../assets/reservia (1).png';
-import Site2 from '../assets/Ohmyfood.jpg';
+const txtAnim = document.querySelector('#txtAnim');
 
-//Faire appraraitre dans le losange l'image du site lors du survole de son nom
-//1)Créer un event lors du survole du nom du site 
-//2)Récupérer le nom et y associer l'image correspondante
-//3)Intégrer l'img dans le losange
+new Typewriter(txtAnim, {
+    deleteSpeed: 30,
+ 
+})
+.typeString('<strong id="nameAnim">Bonjour, je m\'appelle Charlotte <br/> <span class="jobAnim">Développeuse <span style="color:#ffb703">Front-End </span>!</span></strong>')
+.pauseFor(1000)
+.start()
 
-let divSites = document.getElementsByClassName('projectDisplay');
 
-for(const elt of divSites){
-    elt.addEventListener('mouseover', (event) =>{
-        let catchSiteName = event.path[0].attributes.class.value;
-        let siteId = catchSiteName.split(' ')[0]; 
-        displaySiteImg(siteId);
+//Animation bloc de présentation dans le herder
 
-    elt.addEventListener('mouseleave', (event) => {
-        console.log(event)
-        let imgDisplay = document.getElementsByClassName('imgDisplay');
-        imgDisplay[0].remove();
-            
-    })
-    })
-}
-function displaySiteImg(siteId){
-    let losangeDisplay = document.getElementById('img-display');
-    let imgSite = document.createElement('img');
-    console.log(siteId)
-    losangeDisplay.appendChild(imgSite);
-    imgSite.setAttribute('class', 'imgDisplay')
-    console.log(typeof siteId)
-    switch(siteId){
-        case 'site1' :
-            imgSite.src = Site1;
-            break;
-        case 'site2' :
-            imgSite.src = Site2;
-            break;
-        case 'site3' :
-            imgSite.src = Site3;
-            break;
-        default:
-    console.log(`Sorry, we are out of image.`);
-    }
-    
-    
-};
+gsap.from(".txtIntro", 2, {
+    delay: 2,
+    x : -60,
+    opacity:0,
+    ease: Expo.easeInOut
+})
