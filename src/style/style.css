@@ -7,24 +7,27 @@ body{
     background: #f7cad0;
     height: 100vh;
 
+    position: relative;
 }
 html{
     --res: calc(0.01 * 10vmin)
 }
-header{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background: linear-gradient(to right top, #f7cad0, #fae0e4);
-
+.frame__about-item{
+    display: none;
 }
+.frame__about-item--current{
+    display: block;
+    
+}
+
+
 .glass{
     display: flex;
-
+    
     height: 90vh;
     width: 90vw;
-    
+    margin: auto;
+    transform: translateY( 6%);
     background-color:  #fff;
     border-radius: 2rem;
     background:linear-gradient(to right top, rgba(255, 255, 255, 08), rgba(255, 255, 255, 0.3));
@@ -40,44 +43,48 @@ header{
     font-size: calc(52 * var(--res));
 }
 .Typewriter__cursor{
-    
+
     font-size: calc(60 * var(--res));
 }
 .txtIntro{
     margin-top: 10vh;
     font-size: clamp(5px, 2rem, 25px);
 }
-.onOff-wrapper{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50%;
-    
-}
+
 #onOffBtn{
+    position: absolute;
+    top: 40vh;
+    right: 20vw;
     width: calc(300 * var(--res));
     height: calc(300 * var(--res));
 
-    background: red;
+    background: #fff;
+    border: 2px solid #0077b6;
     border-radius: 50%;
+    cursor: pointer;
 }
 .onOffIcon{
     width: 90%;
     height: 90%;
+    
 }
 
 /*Gestionpanneau d'affichage des projets*/
+
+main{
+    margin-top: 15vh;
+}
 .panel-left, .panel-right{
     height:80vh;
     width: 80%;
    margin-top: 10vh;
    margin: auto;
-   background:cadetblue ;
+   display: flex;
 }
 .container-carte{
     width: 50%;
     height: 80%;
-    background: crimson;
+
 }
 .carte{
     width: 100%;
@@ -86,40 +93,41 @@ header{
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    
 }
+
 .img-zoom{
     width: auto;
     height: 100%;
     transform: scale(1);
     transition: transform 0.5s ease-in-out;
     will-change: transform;
-}
-.img-zoom::before{
-    content:'';
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: linear-gradient(0deg, rgb(185, 228, 200) 0%, #52b788 100%);
-    mix-blend-mode: multiply;
-    transform: opacity 0.4s ease-in-out;
+   
+
 
 }
+
 .carte:hover .img-zoom{
     transform: scale(1.3)
+}
+
+.project-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: calc(150 * var(--res));
 }
 /*Ecran en dessous de 700px*/
 @media screen and (max-width:700px){
     .glass{
         flex-direction: column;
     }
-    
+
     #header-txt{
         width: 100%;
     }
     .onOff-wrapper{
         width: 100%;
     }
-    
+
 }

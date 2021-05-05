@@ -4,7 +4,7 @@ new Typewriter(txtAnim, {
     deleteSpeed: 30,
  
 })
-.typeString('<strong id="nameAnim">Bonjour, je m\'appelle Charlotte <br/> <span class="jobAnim">Développeuse <span style="color:#ffb703">Front-End </span>!</span></strong>')
+.typeString('<strong id="nameAnim">Bonjour, je m\'appelle Charlotte <br/> <span class="jobAnim">Développeuse <span style="color:#0077b6">Front-End !</span></span></strong>')
 .pauseFor(1000)
 .start()
 
