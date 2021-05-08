@@ -12,13 +12,13 @@ body{
 html{
     --res: calc(0.01 * 10vmin)
 }
-.frame__about-item{
+/*.frame__about-item{
     display: none;
 }
 .frame__about-item--current{
     display: block;
     
-}
+}*/
 
 
 .glass{
@@ -72,7 +72,10 @@ html{
 /*Gestionpanneau d'affichage des projets*/
 
 main{
-    margin-top: 15vh;
+    margin-top: 100vh;
+    opacity: 0;
+    display:none;
+    
 }
 .panel-left, .panel-right{
     height:80vh;
