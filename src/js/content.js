@@ -16,11 +16,10 @@ const timeline = gsap.timeline({paused:true})
     scale:1.2,
     x: 200,
     scale: 0.3,
-    y: -500, 
+    y: -600, 
 })
 .to("#onOffBtn", 0.3,{ 
-    scale:0,
- 
+    
 })
 .to('.glass', 1, {
     y:'-100%',
