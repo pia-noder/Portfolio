@@ -16,9 +16,7 @@ h1{
 h2{
     font-size: calc(80 * var(--res));
 }
-svg path{
-    display: inline;
-}
+
 
 .glass{
     display: flex;
@@ -114,11 +112,28 @@ svg path{
 .project-title{
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     width: 50%;
-    padding: 15px;
+    
     font-size: calc(20 * var(--res));
+}
+.project-header{
+    margin-bottom: 50px;
+}
+.date, .projetType{
+    color: #9a8c98;
+}
+.text{
+    max-width: 500px;
+}
+.link-wrapper{
+    margin-top: 50px;
+}
+.link-wrapper > a{
+    margin-left: 20px;
+    text-decoration: none;
+    color: black;
 }
 /*Gestion des contenus de chaque projet*/
 .content__article{
