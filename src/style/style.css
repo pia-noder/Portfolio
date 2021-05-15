@@ -130,20 +130,27 @@ h2{
 .link-wrapper{
     margin-top: 50px;
 }
+.link-wrapper::after{
+    content: '';
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 4%;
+    margin: auto;
+    background:#000;
+    transform: scale(0);
+    transition: transform 0.3s ease-in-out;
+}
 .link-wrapper > a{
     margin-left: 20px;
     text-decoration: none;
     color: black;
 }
-/*Gestion des contenus de chaque projet*/
-.content__article{
-    height: 0;
-    overflow: hidden;
+.link-wrapper:hover::after, .link-wrapper:focus::after{
+    transform: scaleX(1);
+    
 }
-.content__article--open{
-    height: 100%;
-    overflow-y: scroll;
-}
+
 /*Ecran en dessous de 700px*/
 @media screen and (max-width:700px){
     .glass{
