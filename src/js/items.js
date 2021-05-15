@@ -13,6 +13,9 @@ const DOM = {
 };
 const timeline = gsap
   .timeline({ paused: true })
+  .to('.onffIcon',{
+    rotation: 45,
+  })
   .to('#onOffBtn', 0.3, {
     scale: 1.3,
     x: 200,
@@ -21,7 +24,7 @@ const timeline = gsap
   })
   .to('#onOffBtn', 0.3, {})
   .to(
-    '.glass',
+    'header',
     1,
     {
       y: '-100%',

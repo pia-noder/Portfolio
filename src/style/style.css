@@ -6,10 +6,7 @@
 html{
     --res: calc(0.01 * 10vmin)
 }
-body{
-    background: #4361EE;
-   
-}
+
 h1{
     font-size: 10rem;
     color: #EF4135;
@@ -18,8 +15,16 @@ h2{
     margin-top: 10vh;
     font-size: calc(30 * var(--res));
 }
+h3{
+    margin-top: 20px;
+    font-size: calc(20 * var(--res));
+    color: #EF4135;
+}
 
-
+header{
+    background: #4361EE;
+    height: 100vh;
+}
 .glass{
     display: flex;
     
@@ -62,12 +67,10 @@ h2{
     height: calc(250 * var(--res));
 
     background: #fff;
-    border: 2px solid #000;
     border-radius: 50%;
     cursor: pointer;
-    box-shadow: 3px 5px 7px 2px rgba(0,0,0,0.87);
     transform: scale(1);
-    transition: transform 0.3s ease-in-out; 
+
 }
 #onOffBtn:hover{
     transform: scale(1.2);
@@ -77,7 +80,88 @@ h2{
     height: 70%;
 
 }
+#onOffBtn:focus +  .onOffIcon{
+    transform: rotate(45deg);
+}
 
+/*Background bateau*/
+section{
+    width: 100%;
+    height: 150vh;
+
+    position: relative;
+}
+.curvy-line{
+    position:absolute;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+}
+.upLine{
+    bottom: 50%;
+
+}
+.downLine{
+    bottom: 20%;
+
+}
+.img-boat{
+    position: absolute;
+    bottom: 30%;
+    right: 0;
+}
+.card{
+    height: 530px;
+    background: #f6fff8;
+    width: calc(430* var(--res));
+    min-width: 300px ;
+    box-shadow: 9px 10px 14px -5px #7a918d;
+    z-index: 2000;
+}
+.card-upline{
+    
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 75%;
+    margin: auto;
+    position: absolute;
+    left: 12%;
+    bottom: 45%;
+}
+.card > a{
+    text-decoration: none;
+    color: black;
+}
+figure{
+    z-index: 10;
+    margin: auto;
+    width: 95%;
+    height: 70%;
+    overflow: hidden;
+}
+figure > img{
+    margin-top: 10px;
+    width: 100%;
+    height: auto;
+    
+    
+}
+figcaption{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 85%;
+    margin: auto;
+}
+.project-details{
+    margin-top: 20px;
+}
+.stack{
+    margin-top: 20px;
+    font-weight: bold;
+    color:#006d77;
+}
 /*Gestionpanneau d'affichage des projets*/
 
 .items{
@@ -164,6 +248,19 @@ h2{
 }
 
 /*Ecran en dessous de 700px*/
+@media screen and (max-width:1510px){
+    section{
+        height: 210vh;
+    }
+    .card{
+        margin-top: 20px;
+    }
+}
+@media screen  and (max-width:1000px) {
+    section{
+        height:350vh;
+    }
+}
 @media screen and (max-width:700px){
     .glass{
         flex-direction: column;
