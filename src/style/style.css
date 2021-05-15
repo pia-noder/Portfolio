@@ -13,14 +13,12 @@ body{
 h1{
     font-size: 5rem;
 }
-/*.frame__about-item{
-    display: none;
+h2{
+    font-size: calc(80 * var(--res));
 }
-.frame__about-item--current{
-    display: block;
-    
-}*/
-
+svg path{
+    display: inline;
+}
 
 .glass{
     display: flex;
@@ -115,7 +113,8 @@ h1{
 
 .project-title{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-around;
     align-items: center;
     width: 50%;
     padding: 15px;
