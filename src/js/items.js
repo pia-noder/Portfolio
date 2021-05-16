@@ -8,7 +8,8 @@ const DOM = {
     isVisible: false,
   },
   links: {
-    home: document.querySelector('#onOffBtn'),
+    home: document.querySelector('#onBtn'),
+    content: document.querySelector('#offBtn')
   },
 };
 const timeline = gsap
@@ -56,3 +57,4 @@ function switchToItems() {
 }
 
 DOM.links.home.addEventListener('click', () => switchToItems());
+DOM.links.content.addEventListener('click',() => switchToItems())

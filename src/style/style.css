@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
 *, ::before, ::after{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Montserrat', sans-serif;
 }
 li{
     list-style: none;
@@ -20,7 +23,6 @@ h1{
     color: #EF4135;
 }
 h2{
-    margin-top: 10vh;
     font-size: calc(30 * var(--res));
 }
 h3{
@@ -66,11 +68,20 @@ header{
     margin-top: 5vh;
     font-size: clamp(5px, 2rem, 25px);
 }
-
-#onOffBtn{
-    position: absolute;
-    top: 40vh;
-    right: 20vw;
+.switchOnBtn{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.switchOffBtn{
+ 
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#onBtn, #offBtn{
+    
     width: calc(250 * var(--res));
     height: calc(250 * var(--res));
 
@@ -88,13 +99,13 @@ header{
     height: 70%;
 
 }
-#onOffBtn:focus +  .onOffIcon{
+#onOffBtn:focus + .onOffIcon{
     transform: rotate(45deg);
 }
 /*SNS*/
 .SNS{
     width: 100%;
-    height: 10vh;
+    height: 5vh;
     padding: 0 32px 32px 0;
     
 }
@@ -103,15 +114,28 @@ header{
     display: flex;
     justify-content: space-around;
     padding: 15px;
-    background: #47BFEC;
+    background: #4361EE;
     border-radius: 0 0 13px 0;
 }
-/*Background bateau*/
-section{
-    width: 100%;
-    height: 150vh;
+.title {
+    width: 57%;
+    margin-top: 2vh;
+    display: flex;
+    justify-content: space-between;
 
+}
+.title h2{
+    font-size:  calc(40* var(--res));
+    margin-top: 3vh;
+}
+
+/*Background bateau*/
+
+
+.projects{
     position: relative;
+    width: 100%;
+    height: 120vh;
 }
 .curvy-line{
     position:absolute;
@@ -120,7 +144,7 @@ section{
     z-index: 1;
 }
 .upLine{
-    bottom: 50%;
+    bottom: 70%;
 
 }
 .downLine{
@@ -129,19 +153,20 @@ section{
 }
 .img-boat{
     position: absolute;
-    bottom: 30%;
-    right: 0;
+    bottom: 32%;
+    right: 10px;
 }
 .card{
-    height: 530px;
+    height: calc(450 * var(--res));
     background: #f6fff8;
-    width: calc(430* var(--res));
+    width: calc(450* var(--res));
     min-width: 300px ;
-    box-shadow: 9px 10px 14px -5px #7a918d;
+    border-radius: 13px;
+    box-shadow: 0 7px 30px 0px rgba(20, 33, 62, 50%);
     z-index: 2000;
 }
 .card:hover, .card:focus{
-    box-shadow: 12px 13px 16px -5px #7a918d;
+    box-shadow: 5px 13px 35px 3px rgba(20, 33, 61, 75%);
     transition: box-shadow 0.2s ease-in-out;
 }
 .card-upline{
@@ -153,7 +178,7 @@ section{
     margin: auto;
     position: absolute;
     left: 12%;
-    bottom: 45%;
+    bottom: 55%;
 }
 .card-downline{
     display: flex;
@@ -162,7 +187,7 @@ section{
     width: 75%;
     margin: auto;
     position: absolute;
-    left: 9%;
+    left: 12%;
     bottom: 10%;
 }
 .card > a{
@@ -177,7 +202,7 @@ figure{
     overflow: hidden;
 }
 figure > img{
-    margin-top: 10px;
+    margin-top: 15px;
     width: 100%;
     height: auto;
     
@@ -283,21 +308,11 @@ figcaption{
     
 }
 
-/*Ecran en dessous de 700px*/
-@media screen and (max-width:1510px){
-    section{
-        height: 250vh;
-    }
-    .card{
-        margin-top: 20px;
-    }
-}
-@media screen  and (max-width:1000px) {
-    section{
-        height:350vh;
-    }
-}
-@media screen and (max-width:700px){
+/*Ecran en dessous de 1510px*/
+
+
+@media screen and (max-width:630px){
+
     .glass{
         flex-direction: column;
     }
