@@ -13,28 +13,32 @@ const DOM = {
 };
 const timeline = gsap
   .timeline({ paused: true })
-  .to('.onffIcon',{
+  .to('.onOffIcon',0.5,{
     rotation: 45,
   })
-  .to('#onOffBtn', 0.3, {
+  .to('#onOffBtn', 0.5, {
     scale: 1.3,
-    x: 200,
-    scale: 0.3,
-    y: -600,
-  })
-  .to('#onOffBtn', 0.3, {})
+    scale:0.8,
+    opacity:0,
+  },0.3)
+  .to('#onOffBtn', 0.7, {})
   .to(
     'header',
     1,
     {
-      y: '-100%',
+      y: '-30%',
       opacity: 0,
       display: 'none',
     },
-    0.2,
+    0.3,
   )
+  .to('#onOffBtn', 0.5, {
+    x: -650,
+    scale: 0.8,
+    y: -450,
+  },0.8)
   .to('.items', 0.8, {
-    marginTop: '15vh',
+   
     opacity: 1,
     display: 'block',
   })

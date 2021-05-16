@@ -83,7 +83,16 @@ header{
 #onOffBtn:focus +  .onOffIcon{
     transform: rotate(45deg);
 }
-
+/*SNS*/
+.SNS{
+    width: 100%;
+    height: 10vh;
+}
+.SNS ul{
+    display: flex;
+    justify-content: space-between;
+    
+}
 /*Background bateau*/
 section{
     width: 100%;
@@ -250,7 +259,7 @@ figcaption{
 /*Ecran en dessous de 700px*/
 @media screen and (max-width:1510px){
     section{
-        height: 210vh;
+        height: 250vh;
     }
     .card{
         margin-top: 20px;
