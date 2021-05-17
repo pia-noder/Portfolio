@@ -22,7 +22,6 @@ const timeline = gsap
     scale:0.8,
     opacity:0,
   },0.3)
-  .to('#onOffBtn', 0.7, {})
   .to(
     'header',
     1,

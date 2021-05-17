@@ -19,11 +19,12 @@ html{
 }
 
 h1{
-    font-size: 10rem;
+    
+    font-size: clamp(45px, calc(120 * var(--res)), 120px);
     color: #EF4135;
 }
-h2{
-    font-size: calc(30 * var(--res));
+.nameAnim{
+    font-size: clamp(40px, 3rem, 35px);
 }
 h3{
     margin-top: 20px;
@@ -37,7 +38,6 @@ header{
 }
 .glass{
     display: flex;
-    
     height: 90vh;
     width: 95vw;
     margin: auto;
@@ -50,13 +50,9 @@ header{
 
 #header-txt{
     width: 50%;
-    padding: calc(180 * var(--res)) 0 0 calc(150 * var(--res));
+    padding: 7% 0 0 7%;
 }
-#nameAnim{
-    
-    font-size: calc(30 * var(--res));
 
-}
 .jobAnim{
     font-size: calc(52 * var(--res));
 }
@@ -66,7 +62,8 @@ header{
 }
 .txtIntro{
     margin-top: 5vh;
-    font-size: clamp(5px, 2rem, 25px);
+    font-size: clamp(15px, 1.4em, 65px);
+    /*15px 25px*/
 }
 .switchOnBtn{
     width: 50%;
@@ -309,19 +306,18 @@ figcaption{
 }
 
 /*Ecran en dessous de 1510px*/
-
-
-@media screen and (max-width:630px){
-
+@media screen and (max-width:1200px){
     .glass{
         flex-direction: column;
     }
-
     #header-txt{
+        order: 2;
         width: 100%;
+        padding: 7%;
     }
-    .onOff-wrapper{
+    .switchOnBtn{
         width: 100%;
+        padding-top:5% ;
     }
-
 }
+
