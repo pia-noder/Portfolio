@@ -117,17 +117,59 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"js/index.js":[function(require,module,exports) {
-var txtAnim = document.querySelector('#txtAnim');
-new Typewriter(txtAnim, {
-  deleteSpeed: 30
-}).typeString('<strong id="nameAnim"><span class="jobAnim">Développeuse <span style="color:#4361EE">Front-End !</span></span></strong>').pauseFor(1000).start(); // Animation bloc de présentation dans le header
+})({"js/items.js":[function(require,module,exports) {
+var _gsap$timeline$to$to;
 
-gsap.from('.txtIntro', 2, {
-  delay: 2,
-  x: -60,
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+var DOM = {
+  home: {
+    section: document.querySelector('header'),
+    isVisible: true
+  },
+  items: {
+    section: document.querySelector('.items'),
+    isVisible: false
+  },
+  links: {
+    home: document.querySelector('#onBtn'),
+    content: document.querySelector('#offBtn')
+  }
+};
+var timeline = gsap.timeline({
+  paused: true
+}).to('.onOffIcon', 0.5, {
+  rotation: 45
+}).to('#onOffBtn', 0.5, (_gsap$timeline$to$to = {
+  scale: 1.3
+}, _defineProperty(_gsap$timeline$to$to, "scale", 0.8), _defineProperty(_gsap$timeline$to$to, "opacity", 0), _gsap$timeline$to$to), 0.3).to('header', 1, {
+  y: '-30%',
   opacity: 0,
-  ease: Expo.easeInOut
+  display: 'none'
+}, 0.3).to('#onOffBtn', 0.5, {
+  x: -650,
+  scale: 0.8,
+  y: -450
+}, 0.8).to('.items', 0.8, {
+  opacity: 1,
+  display: 'block'
+}).to('#onOffBtn', 0.5, {
+  opacity: 1
+});
+
+function switchToItems() {
+  timeline[DOM.items.isVisible ? 'reverse' : 'play'](); // DOM.items.section.classList[DOM.items.isVisible ? 'remove' : 'add']('frame__about-item--current');
+  // DOM.home.section.classList[DOM.home.isVisible ? 'remove' : 'add']('frame__about-item--current');
+
+  DOM.home.isVisible = !DOM.home.isVisible;
+  DOM.items.isVisible = !DOM.items.isVisible;
+}
+
+DOM.links.home.addEventListener('click', function () {
+  return switchToItems();
+});
+DOM.links.content.addEventListener('click', function () {
+  return switchToItems();
 });
 },{}],"../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
@@ -333,5 +375,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/index.js"], null)
-//# sourceMappingURL=/js.00a46daa.js.map
+},{}]},{},["../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/items.js"], null)
+//# sourceMappingURL=/items.55ef7504.js.map

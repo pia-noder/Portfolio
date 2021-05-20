@@ -117,18 +117,8 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"js/index.js":[function(require,module,exports) {
-var txtAnim = document.querySelector('#txtAnim');
-new Typewriter(txtAnim, {
-  deleteSpeed: 30
-}).typeString('<strong id="nameAnim"><span class="jobAnim">Développeuse <span style="color:#4361EE">Front-End !</span></span></strong>').pauseFor(1000).start(); // Animation bloc de présentation dans le header
+})({"js/content.js":[function(require,module,exports) {
 
-gsap.from('.txtIntro', 2, {
-  delay: 2,
-  x: -60,
-  opacity: 0,
-  ease: Expo.easeInOut
-});
 },{}],"../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -333,5 +323,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/index.js"], null)
-//# sourceMappingURL=/js.00a46daa.js.map
+},{}]},{},["../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/content.js"], null)
+//# sourceMappingURL=/content.597e39e6.js.map
