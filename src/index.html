@@ -23,8 +23,30 @@
                   
             </div> 
             <div class="switchOnBtn">
-                <button id="onBtn"><img class="onOffIcon" src="./assets/helm.svg" alt="icon en forme de bouton On/Off"></button>
-                <div class="callToAction"><img src="./assets/arrow-up.png" alt="flèche vers le haut"> Cliquer sur la roue <br/>pour découvrir mes projets</div>
+                <button id="onBtn">
+                    <img class="onOffIcon" src="./assets/helm.svg" alt="icon en forme de bouton On/Off">
+                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+
+                        <!-- to hide the path, it is usually wrapped in a <defs> element -->
+                        <!-- <defs> -->
+                            <path id="MyPath" fill="none"  
+                            d="M 0 50 a 40 40 90 0 0 100 0 a 40 40 90 0 0 -100 0">
+                        <animateTransform attributeName="transform" begin="0s" dur="12s" type="rotate" from="0 50 50" to="360 50 50" repeatCount="indefinite"></animateTransform>
+                      <!-- </defs> -->
+                      </path>
+                        <text>
+                          <textPath xlink:href="#MyPath">
+                           SEE
+                          </textPath>
+                        </text>
+                        <text transform="rotate(180 50 50)">
+                          <textPath xlink:href="#MyPath">
+                           PROJECTS
+                          </textPath>
+                        </text>
+                    </svg>
+                </button>
+         
             </div>
         </div>
         

@@ -78,21 +78,29 @@ header{
     justify-content: space-around;
     align-items: center;
 }
+
 #onBtn, #offBtn{
-    
+    position: relative;
     width: calc(250 * var(--res));
     height: calc(250 * var(--res));
 
-    background: #fff;
+    background-color: #fff;
+    border: none;
     border-radius: 50%;
     cursor: pointer;
-    transform: scale(1);
-
+    
+}
+#onBtn:hover, #offBtn:hover{
+background-color: rgba(67, 97, 238, 50%);
+transition: background-color 1s ease-in-out;
 }
 #onOffBtn:hover{
     transform: scale(1.2);
 }
 .onOffIcon{
+    position:absolute;
+    top: 15%;
+    left: 15%;
     width: 70%;
     height: 70%;
 
