@@ -11,14 +11,20 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "cssnano": "^5.0.3",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-prettier": "^3.4.0",
     "jest": "^26.6.3",
+    "parcel-bundler": "^1.12.5",
+    "postcss": "^8.2.15",
+    "prettier": "2.3.0",
     "sass": "^1.32.8"
   },
   "dependencies": {
+    "autoprefixer": "^10.2.5",
+    "postcss-modules": "^4.0.0",
     "splitting": "^1.0.6"
   }
 }
